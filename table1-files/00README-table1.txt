@@ -1,0 +1,47 @@
+# 00README-table1.txt
+# Eric Nawrocki
+# March 31, 2022
+# 
+# This file explains the contents of this directory which contains
+# supplementary data for the paper "Faster SARS-CoV-2 sequence
+# validation and annotation for GenBank using VADR" related to Table
+# 1.
+#
+# =====================================================================
+#
+# Table 1 shows the number of SARS-CoV-2 GenBank sequences published
+# with release dates in each month in 2020 and 2021.
+# 
+# This directory contains 24 list files, each containing the full list
+# of sequences for each of the 24 months.
+#
+# These lists were obtained on January 19, 2022 from the NCBI Virus
+# SARS-CoV-2 interactive dashboard, tabular view: 
+# https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/sars-cov-2
+# by restricting by 'release date'
+#
+# The dashboard allows you to download all INSDC accessions, which
+# include sequences originally published in GenBank, ENA and DDBJ.
+# These were filtered to only those accessions published in GenBank by
+# fetching all the sequences using an internal NCBI script that
+# fetches sequences and renames them with a 'long form' sequence name
+# that includes the GI and the original database, e.g. 
+#
+# gi|1800242649|gb|MN938385.1|
+#
+# These sequence files were filtered for sequence names containing
+# 'gb' to restrict to only sequences deposited in GenBank.
+# 
+# The lists in this directory include only the resulting GenBank
+# accessions. 
+#
+# The accession list from NCBI virus can also be split into GenBank vs
+# ENA/DDBJ based on the first two letters of the accessions. The
+# 1,616,891 GenBank SARS-CoV-2 sequences from Table 1 all begin with
+# one of the following two letter prefixes: MN, MT, MW, MZ, OK, OL, OM
+# 
+# See https://www.ncbi.nlm.nih.gov/genbank/acc_prefix/
+# for more information on accession prefixes.
+#
+################################################
+# Question/problems? email eric.nawrocki@nih.gov
