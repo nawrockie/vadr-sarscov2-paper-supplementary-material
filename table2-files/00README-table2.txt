@@ -9,7 +9,7 @@
 #
 # =====================================================================
 #
-# Table 2 shows statistics on Norovirus, Dengue virus and SARS-CoV-2
+# Table 2 shows statistics on norovirus, dengue virus and SARS-CoV-2
 # GenBank sequences. 
 # 
 # This file includes the following sections: 
@@ -35,14 +35,14 @@
 # gb.sarscov2.full.r300.list 
 #
 # The following four files listed below list the sets of all and full 
-# length Norovirus and Dengue virus sequences:
+# length norovirus and dengue virus sequences:
 # 
 # noro.all.list
 # noro.full.list
 # dengue.all.list
 # dengue.full.list
 # 
-# The list of Norovirus and Dengue virus sequences were obtained using
+# The list of norovirus and dengue virus sequences were obtained using
 # Entrez queries on Jan 25, 2022: 
 
 esearch -db nuccore -query "Norovirus NOT chimeric AND 50:10000[slen]  AND 1950/01/01:2022/1/25[Publication Date]" | efetch -format acc  > noro.all.list
@@ -81,14 +81,14 @@ esearch -db nuccore -query "Dengue NOT chimeric AND 10117:11200[slen] AND 1950/0
 # (first one letter if the second character is a number, and first two
 # letters if the second character is a letter). 
 #
-# The 44,936 Norovirus sequence accesions from Table 2 all begin with
+# The 44,936 norovirus sequence accesions from Table 2 all begin with
 # one of the following one or two letter prefixes:
 # L, M, S, U, AF, AH, AY, CX, DQ, EA, EF, EU, FJ, GP, GQ, GU, GX, GZ,
 # HK, HL, HM, HQ, JF, JN, JQ, JX, KC, KF, KH, KJ, KM, KP, KR, KT, KU,
 # KX, KY, MF, MG, MH, MI, MK, MM, MN, MO, MT, MV, MW, MX, MY, MZ, OK,
 # OL, OM
 #
-# The 113,211 Dengue virus sequence accesions from Table 2 all begin with
+# The 113,211 dengue virus sequence accesions from Table 2 all begin with
 # one of the following one or two letter prefixes:
 # L, M, S, U, AF, AH, AR, AY, BG, CB, DQ, DV, EA, EF, EU, FJ, GO, GP,
 # GQ, GU, GV, GX, GY, GZ, HJ, HK, HL, HM, HQ, JF, JN, JQ, JR, JX, KC,
@@ -136,12 +136,12 @@ esearch -db nuccore -query "Dengue NOT chimeric AND 10117:11200[slen] AND 1950/0
 # 55-1.0.2dev-5 model set from here:
 # https://ftp.ncbi.nlm.nih.gov/pub/nawrocki/vadr-models/coronaviridae/1.0.2dev-5/vadr-models-corona-55-1.0.2dev-5.tar.gz
 #
-# Example Norovirus command:
+# Example norovirus command:
 
 v-annotate.pl --out_stk gb.noro.full.fa va-gb.noro.full
 
 #
-# Example Dengue command:
+# Example dengue command:
 
 v-annotate.pl --out_stk gb.dengue.full.fa va-gb.dengue.full
 
@@ -156,29 +156,29 @@ v-annotate.pl --out_stk --mxsize 64000 -m $MDLDIR/NC_045512.cm -b $MDLDIR -i $MD
 # 
 # How average percent identity was calculated
 #
-# For each of Norovirus, Dengue virus and SARS-CoV-2, for each of the
+# For each of norovirus, dengue virus and SARS-CoV-2, for each of the
 # RefSeq models (listed below), all alignments from the v-annotate.pl
 # were merged with the esl-alimerge command and then average identity
 # per merged alignment was determined using esl-alipid and the perl
 # script alipid2avg.pl (provided). Those average percent identities
 # were were then themselves averaged to get the values reported in
-# Table 2 (Norovirus: 81.6%, Dengue: 94.4%, SARS-CoV-2: 99.7%).
+# Table 2 (norovirus: 81.6%, dengue: 94.4%, SARS-CoV-2: 99.7%).
 #
 # The 'esl-' programs are installed with VADR in the directory that
 # the $VADREASELDIR environment variable will point to.
 #
 # List of RefSeqs:
-# Norovirus: 
+# norovirus: 
 # NC_001959, NC_006269, NC_008311, NC_010624, NC_029645, NC_029646,
 # NC_029647, NC_031324, NC_039475, NC_039476, NC_039477
 # 
-# Dengue: 
+# dengue: 
 # NC_001474, NC_001475, NC_001477, NC_002640,
 #
 # SARS-CoV-2:
 # NC_045512
 # 
-# Example commands (shown for 1 of the 11 Norovirus RefSeqs):
+# Example commands (shown for 1 of the 11 norovirus RefSeqs):
 
   ls va-gb.noro.full/*NC_001959*stk > NC_001959.list
   $VADREASELDIR/esl-alimerge --list NC_001959.list > NC_001959.merged.stk
